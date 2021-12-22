@@ -157,7 +157,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	if(Button_Pin == GPIO_Pin)
 	{
-		uint8_t data[] = {0x23, 0x5A};
+		const uint8_t data[] = {0x23, 0x5A};
 		ETH_Send_data(destination, data, GET_ARRAY_SIZE(data));
 	}
 }
