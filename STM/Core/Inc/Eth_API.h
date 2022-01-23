@@ -9,8 +9,11 @@
 #define INC_ETH_API_H_
 
 #include <stdbool.h>
+
 #include "netif.h"
 #include "lwip/pbuf.h"
+
+#define MAX_DATA_SIZE					1000U
 
 #define MAC_ADDRESS_LENGTH 				6U
 
@@ -32,6 +35,10 @@
 #define CHECK_TCP_FLAG(data, flag)		(data.TransmisionLayer.tcp_frame.flags.flag)
 
 #define GET_ARRAY_SIZE(array)			(sizeof(array) / sizeof(array[0]))
+
+#define CLEAR_BUFFER(buffer)	 		 free(buffer->payload); \
+										 free(buffer); \
+										 buffer = NULL;
 
 typedef uint8_t eth_address[MAC_ADDRESS_LENGTH];
 
@@ -115,7 +122,7 @@ typedef struct
 
 
 void ETH_Proccess(void);
-void ETH_Send_data(const eth_address dst_mac, uint8_t* data, uint16_t size);
+void ETH_Send_data(const eth_address dst_mac, const uint8_t* data, uint16_t size);
 
 
 #endif /* INC_ETH_API_H_ */

@@ -43,8 +43,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-static const eth_address destination = {0x00, 0x80, 0xE2, 0x00, 0x00, 0x00};
-//static const eth_address destination = {0x14, 0xF6, 0xD8, 0xBB, 0xFF, 0x03};
+static const eth_address destination = {0xD0, 0x03, 0xEB, 0x27, 0xB8, 0xEE};
+//static const eth_address destination = { 0x00, 0x80, 0xE2, 0x00, 0x00, 0x00};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -157,7 +157,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	if(Button_Pin == GPIO_Pin)
 	{
-		uint8_t data[] = {0x23, 0x5A};
+		const uint8_t data[] = {0x01,0xAC, 0x7B, 0xFF, 0x12};
 		ETH_Send_data(destination, data, GET_ARRAY_SIZE(data));
 	}
 }
