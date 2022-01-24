@@ -13,4 +13,4 @@ dofile("raw_eth.lua")
 Po ponownym uruchomieniu nowy dekoder powinien zostać dodany
 
 Przy odebraniu nowej ramki ethernet o typie 0x9999 efekt powinien być następujący:
-![../Screenshots](270453089_455272842975074_5816147422440293401_n.png)
+![plot](../Screenshots/270453089_455272842975074_5816147422440293401_n.png)

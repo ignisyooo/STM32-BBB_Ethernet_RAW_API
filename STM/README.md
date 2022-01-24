@@ -5,7 +5,7 @@ W celu komunikacji Ethernet przy użyciu przygotowana została biblioteka ETH_AP
 W oprogoramowaniu STM32Cube_MX należy wyklikać prostą konfigurację mikrokontrolera uruchamiając
 
 Przykładowa konfiguracja została przedstawiona poniżej:
-![../Screenshots](konfiguracja.png)
+![plot](../Screenshots/konfiguracja.png)
 
 Opis funckjonalności:
 
